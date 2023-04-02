@@ -3,11 +3,11 @@ import { StyleSheet, FlatList } from "react-native";
 import Category from "../models/category";
 import { CATEGORIES } from "../data/dummy-data";
 import CategoryTile from "../components/CategoryTile";
-import { CategoriesStackScreenProps } from "../navigation/types";
+import { CategoriesDrawerScreenProps } from "../navigation/types";
 
 const CategoriesScreen = ({
   navigation,
-}: CategoriesStackScreenProps<"Categories">) => {
+}: CategoriesDrawerScreenProps<"AllCategories">) => {
   function categoryPressedHanlder(categoryId: string) {
     navigation.navigate("Category", { categoryId: categoryId });
   }

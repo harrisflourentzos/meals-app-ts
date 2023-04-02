@@ -17,7 +17,7 @@ import { colors } from "./src/styles/colors";
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const Drawer = createDrawerNavigator<DrawerParamList>();
 
-function renderDrawer() {
+function RenderDrawer() {
   return (
     <Drawer.Navigator
       screenOptions={{
@@ -31,7 +31,7 @@ function renderDrawer() {
       }}
     >
       <Drawer.Screen
-        name="Categories"
+        name="AllCategories"
         component={CategoriesScreen}
         options={{
           title: "All Categories",
@@ -43,6 +43,12 @@ function renderDrawer() {
       <Drawer.Screen
         name="Favourites"
         component={FavouritesScreen}
+        options={{
+          title: "Favourites",
+          drawerIcon: ({ color, size }) => (
+            <Ionicons name="heart" color={color} size={size} />
+          ),
+        }}
       ></Drawer.Screen>
     </Drawer.Navigator>
   );
@@ -62,7 +68,7 @@ export default function App() {
       >
         <Stack.Screen
           name="Categories"
-          component={renderDrawer}
+          component={RenderDrawer}
           options={{
             headerShown: false,
           }}
