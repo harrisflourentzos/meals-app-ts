@@ -7,8 +7,8 @@ import {
   Platform,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import Meal from "../models/meal";
-import { colors } from "../styles/colors";
+import Meal from "../../models/meal";
+import { colors } from "../../styles/colors";
 
 type Props = { children?: JSX.Element; meal: Meal };
 
